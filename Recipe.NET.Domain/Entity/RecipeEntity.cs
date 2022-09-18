@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recipe.NET.Domain.Entity
 {
-    public class Recipe
+    public class RecipeEntity
     {
         public int RecipeId { get; set; }
         public Guid RecipeGuid { get; set; }
