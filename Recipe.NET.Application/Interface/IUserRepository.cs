@@ -8,7 +8,7 @@ namespace Recipe.NET.Application.Interface
 {
     public interface IUserRepository
     {
-        void Register();
+        Task<int> Register();
         Task<string> Login();
     }
 }
