@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.NET.Blazor.Server", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.NET.Blazor.Client", "Recipe.NET.Blazor\Client\Recipe.NET.Blazor.Client.csproj", "{033326CA-32E0-407B-84C1-74ADD7F3A2B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.NET.Blazor.Shared", "Recipe.NET.Blazor\Shared\Recipe.NET.Blazor.Shared.csproj", "{D21C30EB-5278-4E41-9633-3A83EF5A8E1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.NET.Infrastructure", "Recipe.NET.Blazor\Shared\Recipe.NET.Infrastructure.csproj", "{D21C30EB-5278-4E41-9633-3A83EF5A8E1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
