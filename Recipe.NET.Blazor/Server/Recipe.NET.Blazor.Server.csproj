@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,7 +14,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Recipe.NET.Application\Recipe.NET.Application.csproj" />
     <ProjectReference Include="..\Client\Recipe.NET.Blazor.Client.csproj" />
-    <ProjectReference Include="..\Shared\Recipe.NET.Blazor.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 
