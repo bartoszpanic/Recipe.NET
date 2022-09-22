@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Recipe.NET.Application\Recipe.NET.Application.csproj" />
+    <ProjectReference Include="..\..\Recipe.NET.Infrastructure\Recipe.NET.Infrastructure.csproj" />
     <ProjectReference Include="..\Client\Recipe.NET.Blazor.Client.csproj" />
   </ItemGroup>
 
