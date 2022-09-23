@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Recipe.NET.Application.Interface;
+using Recipe.NET.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 
