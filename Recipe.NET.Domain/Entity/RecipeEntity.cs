@@ -13,8 +13,7 @@ namespace Recipe.NET.Domain.Entity
         public string RecipeName { get; set; } = string.Empty;
         public string RecipeDescription { get; set; } = string.Empty;
         public string RecipeShortDescription { get; set; } = string.Empty;
-
-        public ICollection<Ingredient> Ingredients { get; set; } = null!;
+        public List<Ingredient> Ingredients { get; set; } = null!;
 
         public User User { get; set; }
     }
