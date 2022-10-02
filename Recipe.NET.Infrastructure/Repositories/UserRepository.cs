@@ -13,18 +13,25 @@ namespace Recipe.NET.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public static User user = new User(); // temporary to test
+        private readonly DataContext _context;
+        public UserRepository(DataContext context)
+        {
+            _context = context; 
+        }
         public Task<BaseResponse<string>> Login(string email, string password)
         {
             throw new NotImplementedException();
         }
 
-        public BaseResponse<int> Register(UserRegisterDto userRegister)
+        public BaseResponse<int> Register(User user, string password)
         {
-            CreatePasswordHash(userRegister.Password, out byte[] passwordHash, out byte[] passwordSalt);
+            CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
 
             user.PasswordSalt = passwordSalt;
             user.PasswordHash = passwordHash;
+
+            _context.Add(user); 
+            _context.SaveChanges();
 
             return new BaseResponse<int> { Data = user.UserId, Message = "Registration successful!" };
         }

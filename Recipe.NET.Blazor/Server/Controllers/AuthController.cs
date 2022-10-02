@@ -21,7 +21,10 @@ namespace Recipe.NET.Blazor.Server.Controllers
         [HttpPost("register")]
         public ActionResult<BaseResponse<int>> Register(UserRegisterDto user)
         {
-            var response = _userRepository.Register(user);
+            var response = _userRepository.Register(new User
+            {
+                Email = user.Email
+            }, user.Password);
 
             if (!response.Success)
             {
