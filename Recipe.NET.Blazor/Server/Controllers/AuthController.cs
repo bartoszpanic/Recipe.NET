@@ -18,13 +18,26 @@ namespace Recipe.NET.Blazor.Server.Controllers
             _userRepository = userRepository;
         }
 
-        [HttpPost("register")]
-        public ActionResult<BaseResponse<int>> Register(UserRegisterDto user)
+        [HttpPost("login")]
+        public async Task<ActionResult<BaseResponse<string>>> Login(UserLoginDto userLogin)
         {
-            var response = _userRepository.Register(new User
+            var response = await _userRepository.Login(userLogin.Email, userLogin.Password);
+            if (!response.Success)
             {
-                Email = user.Email
-            }, user.Password);
+                return BadRequest(response);
+            }
+            
+            return Ok(response);
+        }
+
+
+        [HttpPost("register")]
+        public async Task<ActionResult<BaseResponse<int>>> Register(UserRegisterDto userRegister)
+        {
+            var response = await _userRepository.Register(new User
+            {
+                Email = userRegister.Email
+            }, userRegister.Password);
 
             if (!response.Success)
             {

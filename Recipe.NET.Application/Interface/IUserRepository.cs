@@ -11,7 +11,7 @@ namespace Recipe.NET.Application.Interface
 {
     public interface IUserRepository
     {
-        BaseResponse<int> Register(User user, string password);
+        Task<BaseResponse<int>> Register(User user, string password);
         Task<BaseResponse<string>> Login(string email, string password);
     }
 }
