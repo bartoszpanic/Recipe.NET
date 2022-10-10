@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Recipe.NET.Application.Dtos;
+using Recipe.NET.Application.Response;
+using Recipe.NET.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +11,7 @@ namespace Recipe.NET.Application.Interface
 {
     public interface IUserRepository
     {
-        void Register();
-        Task<string> Login();
+        Task<BaseResponse<int>> Register(User user, string password);
+        Task<BaseResponse<string>> Login(string email, string password);
     }
 }
