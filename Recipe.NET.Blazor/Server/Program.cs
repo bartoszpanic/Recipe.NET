@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Recipe.NET.Application;
 using Recipe.NET.Application.Interface;
 using Recipe.NET.Infrastructure;
 using Recipe.NET.Infrastructure.Repositories;
+using Recipe.NET.Infrastructure.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +21,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddApplication();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IRecipeService, RecipeService>();
 
 var app = builder.Build();
 
