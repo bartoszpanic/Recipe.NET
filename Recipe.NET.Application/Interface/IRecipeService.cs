@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Recipe.NET.Application.Interface
 {
-    public interface IRecipeRepository
+    public interface IRecipeService
     {
         Task<BaseResponse<RecipeEntity>> CreateRecipe(RecipeDto dto);
         Task<BaseResponse<RecipeEntity>> UpdateRecipe(RecipeDto dto);
