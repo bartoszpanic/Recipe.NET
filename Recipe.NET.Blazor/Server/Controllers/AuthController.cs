@@ -11,9 +11,9 @@ namespace Recipe.NET.Blazor.Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUserService _userRepository;
 
-        public AuthController(IUserRepository userRepository)
+        public AuthController(IUserService userRepository)
         {
             _userRepository = userRepository;
         }

@@ -16,11 +16,11 @@ using System.Threading.Tasks;
 
 namespace Recipe.NET.Infrastructure.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserService : IUserService
     {
         private readonly DataContext _context;
         private readonly IConfiguration _configuration;
-        public UserRepository(DataContext context, IConfiguration configuration)
+        public UserService(DataContext context, IConfiguration configuration)
         {
             _configuration = configuration;
             _context = context; 

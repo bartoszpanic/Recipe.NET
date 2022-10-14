@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Recipe.NET.Application.Interface
 {
-    public interface IUserRepository
+    public interface IUserService
     {
         Task<BaseResponse<int>> Register(User user, string password);
         Task<BaseResponse<string>> Login(string email, string password);
