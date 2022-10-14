@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Recipe.NET.Application.Dtos
+namespace Recipe.NET.Application.Dtos.User
 {
     public class UserLoginDto
     {

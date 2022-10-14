@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Recipe.NET.Application.Dtos;
+using Recipe.NET.Application.Dtos.User;
 using Recipe.NET.Application.Interface;
 using Recipe.NET.Application.Response;
 using Recipe.NET.Domain.Entity;
